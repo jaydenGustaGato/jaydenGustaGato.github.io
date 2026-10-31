@@ -13,21 +13,32 @@ h1 {
 /* Menu Button */
 .menu_button {
     position: fixed;
-    top: 1.5rem;
-    right: 4rem;
+    top: 2.5rem;
+    right: 5rem;    
+    z-index: 9998;
 
-    transform: translate(-50%, 0%);
-
-    width: 2rem;
-    height: 2rem;
+    width: 1.4rem;
+    height: 1rem;
+}
+.menu_button_link {
+    z-index: 9999;
 }
 .menu_button_lines {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
-    background-color: black
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+.menu_button_line {
+    min-height: 0.08rem;
+    min-width: 100%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1000px;
 }
 
 /*Stuff for the Nav Bar But I wish I had a chocolate bar instead*/
@@ -39,7 +50,7 @@ h1 {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999;
+    z-index: 9997;
 
     width: 100vw;
 
