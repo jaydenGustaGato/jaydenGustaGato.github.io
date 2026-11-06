@@ -18,6 +18,18 @@ h1 {
     margin-right: 1rem;
 }
 
+/* Animations */
+@keyframes buttonHovering1 {
+    100% {
+        transform: translate(0%, 150%);
+    }
+}
+@keyframes buttonHovering2 {
+    100% {
+        transform: translate(0%, -150%);
+    }
+}
+
 /* Menu Button */
 .menu_button {
     position: fixed;
@@ -47,7 +59,18 @@ h1 {
     min-width: 100%;
     background-color: rgb(255, 255, 255);
     border-radius: 1000px;
+    transition: transform 0.3s cubic-bezier(.67,0,.2,1);
 }
+.menu_button:hover .menu_button_line:nth-child(1) {
+    transform: translate(0%, 270%);
+    transition: transform 0.5s cubic-bezier(.67,0,.2,1);
+}
+
+.menu_button:hover .menu_button_line:nth-child(2) {
+    transform: translate(0%, -270%);
+    transition: transform 0.5s cubic-bezier(.67,0,.2,1);
+}
+
 
 /*Stuff for the Nav Bar But I wish I had a chocolate bar instead*/
 .nav_bar {
