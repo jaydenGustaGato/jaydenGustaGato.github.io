@@ -85,6 +85,8 @@ h1 {
     background-color: rgba(255, 255, 255, 0);
 }
 .nav_logo {
+    min-width: 2rem;
+    min-height: 2rem;
     width: 2rem;
     height: 2rem;
 }
@@ -158,12 +160,46 @@ h1 {
 
     height: auto;
     width: 100vw;
+
+    box-sizing: border-box;
 }
-#home_about_desc {
+.home_about_desc {
+    display: flex;
+    flex: row;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
     padding: 2rem;
+
+    box-sizing: border-box;
 }
-#home_about_desc p {
-    font-size: 3rem;
+.home_about_desc p {
+    font-size: 2.5rem;
+    width: 50%;
+    height: 50%;
+}
+.home_about_img {
+    width: 20rem;
+    height: 20rem;
+}
+.home_about_img:nth-child(1) {
+    background-image: url(TeddyRoosevelt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home_about_img:nth-child(2) {
+    background-image: url(TeddyRoosevelt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.home_about_img:nth-child(3) {
+    background-image: url(TeddyRoosevelt.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* About section
