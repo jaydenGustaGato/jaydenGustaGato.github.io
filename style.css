@@ -25,10 +25,10 @@ h3 {
 
 /* for anything in the menu bar/hero banner */
 .menu_text {
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     text-decoration: none;
-    color: rgb(255, 255, 255);
     margin-right: 1rem;
+    color: rgb(255, 77, 28);
 }
 /* for any p */
 p {
@@ -175,7 +175,7 @@ p {
     height: 2rem;
 }
 
-/* Hero banner (mostly universal format/text size*/
+/* Hero banner */
 .banner_header {
     width: 40vw;
 
@@ -187,7 +187,7 @@ p {
     font-size: 4rem;
     text-align: left;
 
-    color: rgb(255, 255, 255);
+    color: white;
 }
 .banner_text {
     width: 20vw;
@@ -200,7 +200,7 @@ p {
 
     text-align: left;
     
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 /* Home page specific styles */
@@ -216,7 +216,7 @@ p {
     background-size: cover;
     background-position: center;
 
-    background-color: white;
+    background-color: black;
 }
 
 /* Description section of home */
@@ -510,7 +510,6 @@ p {
     justify-content: space-around;
     align-items: center;
 
-    background-color: rgb(188, 153, 221);
     border-radius: 1000px;
     width: 10vw;
     height: 10vw;
@@ -581,7 +580,7 @@ p {
     height: fit-content;
     transform: scale(150%, 150%);
     border-radius: 25px;
-    width: 15%;
+    width:fit-content;
 }
 .floating_person:hover > p{
     display: block;
@@ -589,32 +588,13 @@ p {
 #floating_people:has(.floating_person:hover) .floating_person {
    animation-play-state: paused;
 }
+
 /* Navigation page specific styling */
 .miniheader {
     font-size: 1.25rem;
     text-decoration: none;
     margin-bottom: 1rem;
-}
-.big_option {
-    font-size: 4rem;
-    margin: 1rem 0 1rem 0;
-    width: fit-content;
-}
-.big_option a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-#big_options:hover .big_option a{
-    color: rgba(0, 0, 0, 0.394);
-}
-#big_options:hover .big_option a:hover {
-    color: rgb(0, 0, 0);    
-}
-#navigation_content {
-    display: flex;
-    flex-direction: row;
-    margin-top: 5rem;
-    margin-left: 2rem;
+    color: rgb(117, 117, 117);
 }
 #big_options {
     display: flex;
@@ -627,6 +607,29 @@ p {
 
     color: rgb(0, 0, 0)
 }
+.big_option {
+    font-size: 4rem;
+    padding: 0.5rem 0 0.5rem 0;
+    margin: 0;
+    width: fit-content;
+
+}
+.big_option a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+#big_options:has(.big_option:hover) .big_option:not(:hover) a{
+    color: rgba(0, 0, 0, 0.394);
+}
+#big_options .big_option:hover a {
+    color: rgb(0, 0, 0);    
+}
+#navigation_content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    margin-left: 2rem;
+}
 #other_info {
     display: flex;
     flex-direction: column;
@@ -634,7 +637,11 @@ p {
     width: 40%;
 }
 .other_info_div:nth-child(2) {
-    margin-top: 10vh;
+    margin-top: 4vh;
+}
+.other_info_div > p:nth-child(n + 2) {
+    margin-top: 0;
+    margin-bottom:0.3rem;
 }
 #nav_image {
     width: 10vw;
