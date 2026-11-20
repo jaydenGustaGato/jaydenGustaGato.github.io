@@ -28,11 +28,59 @@ h3 {
     font-size: 1.25rem;
     text-decoration: none;
     margin-right: 1rem;
-    color: rgb(255, 77, 28);
+    color: rgb(0, 0, 0);
 }
 /* for any p */
 p {
     font-size: 1.25rem;
+}
+/* General top layout of most of my pages other than home */
+.noHomeOnlyBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 75vh;
+    
+    padding: 0 8% 0 8%;
+}
+.notHome_banner_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 45%;
+    height: fit-content;
+    text-align: left;
+
+    color: rgb(0, 0, 0);
+}
+.notHome_banner_header {
+    font-size: 4rem;
+    color: rgb(0, 0, 0);
+    margin-bottom: 0.5rem;
+}
+.notHome_banner_text {   
+    margin-top: 0.5rem;
+    color: rgb(0, 0, 0);
+}
+.notHome_banner_img {
+    width: 400px;
+    height: 400px;
+
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.notHome_page_img {
+    width: 100vw;
+    height: 110vh;
+    background-image: url("placeholder.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 /* Animations */
@@ -144,18 +192,33 @@ p {
 
     background-color: rgba(255, 255, 255, 0);
 }
+.nav_bar > a {
+    text-decoration: none;
+}
 .nav_logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-width: 2rem;
+    min-height: 2rem;
+    width: fit-content;
+    height: 2rem;
+}
+.logo_img {
     min-width: 2rem;
     min-height: 2rem;
     width: 2rem;
     height: 2rem;
-}
-.logo_img {
-    width: 100%;
-    height: 100%;
 
     object-fit: cover;
     object-position: 50% 50%;
+}
+.logo_text {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    margin-left: 1rem;
 }
 .nav_anchors {
     display: flex;
@@ -164,7 +227,7 @@ p {
     align-items: center;
 
     width: auto;
-    margin-left: 40%;
+    margin-left: 26%;
 }
 .menu {
     margin: 1rem;
@@ -392,53 +455,6 @@ p {
 #about_page .menu_text {
     color: black;
 }
-#about_banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 75vh;
-    
-    padding: 0 8% 0 8%;
-}
-#about_banner_text{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-
-    width: 45%;
-    height: fit-content;
-    text-align: left;
-
-    color: rgb(0, 0, 0);
-}
-.about_banner_header {
-    font-size: 4rem;
-    color: rgb(0, 0, 0);
-    margin-bottom: 0.5rem;
-}
-.about_banner_text {   
-    margin-top: 0.5rem;
-    color: rgb(0, 0, 0);
-}
-#about_banner_img {
-    width: 400px;
-    height: 400px;
-
-    background-image: url("TeddyRoosevelt.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-#about_page_img {
-    width: 100vw;
-    height: 110vh;
-    background-image: url("placeholder.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
 #about_content_section {
     display: flex;
     flex-direction: column;
@@ -523,19 +539,22 @@ p {
     animation-timing-function: cubic-bezier(0,.33,1,.72);
     animation-iteration-count: infinite;
 }
-.floating_person > p {
+.floating_person .floating_text {
     display: none;
 }
 .floating_person:nth-child(1) {
-    animation-delay: 2s;
+    animation-delay: 0s;
 }
 .floating_person:nth-child(2) {
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 .floating_person:nth-child(3) {
-    animation-delay: 6s;
+    animation-delay: 4s;
 }
 .floating_person:nth-child(4) {
+    animation-delay: 6s;
+}
+.floating_person:nth-child(5) {
     animation-delay: 8s;
 }
 .floating_person_img {
@@ -545,32 +564,32 @@ p {
     border-radius: 1000px;
     background-color: rgb(127, 155, 255);
 }
-.floating_person_img:nth-child(1) {
+.floating_person:nth-child(1) .floating_person_img{
+    background-image: url(el_gato_gordo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.floating_person:nth-child(2) .floating_person_img{
     background-image: url(TeddyRoosevelt.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.floating_person_img:nth-child(2) {
+.floating_person:nth-child(3) .floating_person_img{
+    background-image: url(el_gato_gordo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.floating_person:nth-child(4) .floating_person_img{
     background-image: url(TeddyRoosevelt.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
-.floating_person_img:nth-child(3) {
-    background-image: url(TeddyRoosevelt.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.floating_person_img:nth-child(4) {
-    background-image: url(TeddyRoosevelt.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-.floating_person_img:nth-child(5) {
-    background-image: url(TeddyRoosevelt.png);
+.floating_person:nth-child(5) .floating_person_img {
+    background-image: url(el_gato_gordo.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -582,8 +601,14 @@ p {
     border-radius: 25px;
     width:fit-content;
 }
-.floating_person:hover > p{
-    display: block;
+.floating_person:hover .floating_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.floating_person:hover .floating_text p:nth-child(2) {
+    margin-top: 0rem;
 }
 #floating_people:has(.floating_person:hover) .floating_person {
    animation-play-state: paused;
