@@ -614,6 +614,69 @@ p {
    animation-play-state: paused;
 }
 
+/* Services page specific stuff */
+#services_content_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 100vw;
+    height: fit-content;
+    box-sizing: border-box;
+
+    padding: 0 8% 8% 8%;
+}
+#services_content_section > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: start;
+
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+}
+#services_content_content {
+    width: 60%;
+    margin-left: auto;
+}
+#services_nav_bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+    left: 0;
+    z-index: 9997;
+
+    width: 100%;
+    height: 5rem;
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 1.5rem 2rem 1.5rem 2rem;
+
+    background-color: rgba(82, 109, 191, 0.638);
+}
+#services_nav_bar > a {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+#rent_vehicle {
+
+}
+#public_transit {
+
+}
+#private_transit {
+    
+}
+#special_transit {
+    
+}
+
 /* Navigation page specific styling */
 .miniheader {
     font-size: 1.25rem;
