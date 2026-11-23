@@ -1,4 +1,7 @@
 /* General item classes */
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     padding: 0;
@@ -652,7 +655,7 @@ p {
     z-index: 9997;
 
     width: 100%;
-    height: 5rem;
+    height: 4rem;
     box-sizing: border-box;
 
     margin: 0;
@@ -664,8 +667,39 @@ p {
     margin-left: 2rem;
     margin-right: 2rem;
 }
-#rent_vehicle {
+.services_option {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: space-around;
+}
+.services_option:nth-child(1) {
+    margin-right: auto;
+}
+.services_option:nth-child(3) {
+    margin-left: auto;
+}
+#rent_vehicle, #public_transit, #private_transit {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: start;
 
+    width: 100vw;
+    height: fit-content;
+    box-sizing: border-box;
+
+    padding: 0 8% 0 8%;
+}
+#rent_vehicle > div, #public_transit > div, #private_transit > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
 }
 #public_transit {
 
