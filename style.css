@@ -9,20 +9,29 @@ body {
     overflow-x: hidden;
     background-color: rgb(255, 255, 255);
 }
-
 h1 {
     font-size: 4rem;
     text-decoration: none;
     font-weight: normal;
 }
-
 h2 {
     font-size: 2.5rem;
     font-weight: normal;
 }
-
 h3 {
     font-size: 2rem;
+    font-weight: normal;
+}
+h4 {
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+h5 {
+    font-size: 1.25rem;
+    font-weight: normal;
+}
+p {
+    font-size: 1rem;
     font-weight: normal;
 }
 
@@ -33,10 +42,6 @@ h3 {
     margin-right: 1rem;
     color: rgb(0, 0, 0);
 }
-/* for any p */
-p {
-    font-size: 1.25rem;
-}
 /* General top layout of most of my pages other than home */
 .noHomeOnlyBanner {
     display: flex;
@@ -44,7 +49,7 @@ p {
     justify-content: space-between;
     align-items: center;
     height: 75vh;
-    
+
     padding: 0 8% 0 8%;
 }
 .notHome_banner_text{
@@ -86,6 +91,7 @@ p {
     background-position: center;
 }
 
+
 /* Animations */
 @keyframes addBackground {
     0% {
@@ -100,7 +106,6 @@ p {
         background-color: white;
     }
 }
-
 
 @keyframes moveSideways {
     0% {
@@ -294,8 +299,9 @@ p {
 
     height: auto;
     width: 100vw;
-
     box-sizing: border-box;
+
+    padding: 0 8% 0 8%;
 }
 .home_about_desc {
     display: flex;
@@ -315,7 +321,7 @@ p {
 }
 .home_about_img {
     width: 20rem;
-    height: 20rem;
+    aspect-ratio: 3 / 4;
 }
 .home_about_img:nth-child(1) {
     background-image: url(TeddyRoosevelt.png);
@@ -348,29 +354,16 @@ p {
     width: 100vw;
     box-sizing: border-box;
 
-    padding: 2.5rem;
+    padding: 2.5rem 5% 2.5rem 5%;
 }
 #home_services > h2 { 
-    font-size: 2.5rem;
     line-height: 3rem;
-
-    font-weight: normal;
-
     margin-bottom: 0.8rem;
 }
-#home_services > p {
-    font-size: 1.25rem;
-    font-weight: normal;
-}
 #home_services > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-
-    width: 100%;
-    height: 90%;
-
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
     margin-top: 1rem;
 }
 .home_service_option {
@@ -379,22 +372,14 @@ p {
     justify-content: center;
     align-items: flex-start;
 
-    width: 32%;
-    height: 85vh;
-
     border-radius: 25px;
 
     background-color: rgb(39, 99, 156);
 
     padding: 0.5rem 1rem 0.5rem 1rem;
-    margin: 0.5rem 1rem 0.5rem 1rem;
 }
 .home_service_option > h3 {
-    font-size: 2rem;
     line-height: 2rem;
-
-    font-weight: normal;
-
     margin-bottom: 0rem;
 }
 .home_service_option > p {
@@ -411,7 +396,7 @@ p {
 }
 .home_service_img {
     width: 80%;
-    height: 60%;
+    aspect-ratio: 4 / 3;
 
     margin: 2rem auto 0 auto;
 
@@ -424,7 +409,7 @@ p {
 }
 .home_service_button {
     width: 100%;
-    height: 100px;
+    height: 36px;
 
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -597,23 +582,23 @@ p {
     background-size: cover;
     background-position: center;
 }
-.floating_person:hover {
+.floating_person:hover, .floating_person:active {
     padding-top: 1%;
     height: fit-content;
     transform: scale(150%, 150%);
     border-radius: 25px;
     width:fit-content;
 }
-.floating_person:hover .floating_text {
+.floating_person:hover .floating_text, .floating_person:active .floating_text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.floating_person:hover .floating_text p:nth-child(2) {
+.floating_person:hover .floating_text p:nth-child(2), .floating_person:active .floating_text p:nth-child(2) {
     margin-top: 0rem;
 }
-#floating_people:has(.floating_person:hover) .floating_person {
+#floating_people:has(.floating_person:hover) .floating_person, #floating_people:has(.floating_person:active) .floating_person {
    animation-play-state: paused;
 }
 
@@ -667,48 +652,117 @@ p {
     margin-left: 2rem;
     margin-right: 2rem;
 }
+
+#rent_vehicle, #public_transit, #private_transit, #special_transit {
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    padding: 2% 8% 5% 8%;
+}
+#rent_vehicle > h2, #public_transit > h2, #private_transit > h2, #special_transit > h2 {
+    margin: 0 0 2rem 0;
+}
+#rent_vehicle > div, #public_transit > div, #private_transit > div, #special_transit > div {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 3rem;
+}
 .services_option {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: space-around;
+    box-sizing: border-box;
 }
-.services_option:nth-child(1) {
-    margin-right: auto;
+.services_option_img {
+    width: 100%;
+    aspect-ratio: 6 / 7;
 }
-.services_option:nth-child(3) {
-    margin-left: auto;
-}
-#rent_vehicle, #public_transit, #private_transit {
+.services_option_text {
+    margin-top: auto;
+
+    padding-top: 4%;
+
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: start;
-
-    width: 100vw;
-    height: fit-content;
-    box-sizing: border-box;
-
-    padding: 0 8% 0 8%;
 }
-#rent_vehicle > div, #public_transit > div, #private_transit > div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-
-    width: 100%;
-    height: fit-content;
-    box-sizing: border-box;
+.services_option_text > h4, .services_option_text > h5 {
+    margin-top: auto;
+    margin-bottom: 1rem;
 }
-#public_transit {
-
+#serviceimgA {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-#private_transit {
-    
+#serviceimgB {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
-#special_transit {
-    
+#serviceimgC {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgD {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgE {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgF {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgG {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgH {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgI {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgJ {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgK {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#serviceimgL {
+    background-image: url("TeddyRoosevelt.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Navigation page specific styling */
@@ -734,16 +788,15 @@ p {
     padding: 0.5rem 0 0.5rem 0;
     margin: 0;
     width: fit-content;
-
 }
 .big_option a {
     text-decoration: none;
     color: rgb(0, 0, 0);
 }
-#big_options:has(.big_option:hover) .big_option:not(:hover) a{
+#big_options:has(.big_option:hover) .big_option:not(:hover) a, #big_options:has(.big_option:active) .big_option:not(:active) a{
     color: rgba(0, 0, 0, 0.394);
 }
-#big_options .big_option:hover a {
+#big_options .big_option:hover a, #big_options .big_option:active a {
     color: rgb(0, 0, 0);    
 }
 #navigation_content {
@@ -776,63 +829,3 @@ p {
     background-size: cover;
     background-position: center;
 }
-
-
-
-/* About section
-#about_div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    height: auto;
-    width: 100vw;
-
-    text-align: center;
-}
-#about_explanations_section {
-    width: 100vw;
-
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.about_explanation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.about_p {
-    font-size: 1.5rem;
-}
-.about_img {
-    width: 5rem;
-    height: 5rem;
-}
-#about_img_1 {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: 50% 50%;
-}
-#about_img_2 {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: 50% 50%;
-}
-#about_img_3 {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: 50% 50%;
-}
-*/
