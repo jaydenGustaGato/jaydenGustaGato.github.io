@@ -9,30 +9,59 @@ body {
     overflow-x: hidden;
     background-color: rgb(255, 255, 255);
 }
+
+/* Font */
 h1 {
     font-size: 4rem;
     text-decoration: none;
     font-weight: normal;
+    margin: 0;
+    font-family: "Baumans", sans-serif;
+    font-style: normal;
+    color: black;
 }
 h2 {
     font-size: 2.5rem;
     font-weight: normal;
+    font-family: "Baumans", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
 }
 h3 {
     font-size: 2rem;
     font-weight: normal;
+    font-family: "Baumans", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
 }
 h4 {
     font-size: 1.5rem;
     font-weight: normal;
+    font-family: "Baumans", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
 }
 h5 {
     font-size: 1.25rem;
     font-weight: normal;
+    font-family: "Baumans", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    color: black;
 }
 p {
+    font-family: "Offside", sans-serif;
     font-size: 1rem;
     font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
 
 /* for anything in the menu bar/hero banner */
@@ -200,9 +229,6 @@ p {
 
     background-color: rgba(255, 255, 255, 0);
 }
-.nav_bar > a {
-    text-decoration: none;
-}
 .nav_logo {
     display: flex;
     flex-direction: row;
@@ -215,13 +241,8 @@ p {
     height: 2rem;
 }
 .logo_img {
-    min-width: 2rem;
-    min-height: 2rem;
-    width: 2rem;
-    height: 2rem;
-
-    object-fit: cover;
-    object-position: 50% 50%;
+    height: 3rem;
+    aspect-ratio: auto;
 }
 .logo_text {
     text-decoration: none;
@@ -282,7 +303,7 @@ p {
     width: 100vw;
     height: 100vh;
 
-    background-image: url("placeholder2.jpg");
+    background-image: url("placeholder.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -314,8 +335,7 @@ p {
 
     box-sizing: border-box;
 }
-.home_about_desc p {
-    font-size: 2.5rem;
+.home_about_desc h3 {
     width: 60%;
     height: 50%;
 }
@@ -344,7 +364,6 @@ p {
 
 /* Services section of home */
 #home_services {
-    background-color: rgb(30, 102, 165);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -374,16 +393,11 @@ p {
 
     border-radius: 25px;
 
-    background-color: rgb(39, 99, 156);
-
     padding: 0.5rem 1rem 0.5rem 1rem;
 }
 .home_service_option > h3 {
     line-height: 2rem;
     margin-bottom: 0rem;
-}
-.home_service_option > p {
-    font-size: 1.25rem;
 }
 .home_service_option > ul {
     font-size: 1.25rem;
@@ -404,8 +418,6 @@ p {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-
-    background-color: rgb(43, 30, 143);
 }
 .home_service_button {
     width: 100%;
@@ -413,9 +425,6 @@ p {
 
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
-
-    background-color: rgb(255, 255, 255);
-    color: rgb(39, 99, 156);
 
     display: flex;
     justify-content: center;
@@ -432,11 +441,6 @@ p {
 
     width: 100%;
     height: 100%;
-
-    text-decoration: none;
-    font-size: 1.25rem;
-
-    color: rgb(39, 99, 156);
 }
 
 /* About page */
@@ -453,7 +457,7 @@ p {
     height: fit-content;
     box-sizing: border-box;
 
-    padding: 0 8% 0 8%;
+    padding: 2% 8% 0 8%;
 }
 #about_content_section > div{
     display: flex;
@@ -488,7 +492,7 @@ p {
     height: fit-content;
     box-sizing: border-box;
 
-    padding: 0 8% 0 8%;
+    padding: 2% 8% 0 8%;
 }
 #about_people > div{
     display: flex;
@@ -534,16 +538,16 @@ p {
     animation-delay: 0s;
 }
 .floating_person:nth-child(2) {
-    animation-delay: 1s;
+    animation-delay: 1.5s;
 }
 .floating_person:nth-child(3) {
-    animation-delay: 2s;
-}
-.floating_person:nth-child(4) {
     animation-delay: 3s;
 }
+.floating_person:nth-child(4) {
+    animation-delay: 4.5s;
+}
 .floating_person:nth-child(5) {
-    animation-delay: 4s;
+    animation-delay: 6s;
 }
 .floating_person_img {
     width: 10vw;
@@ -613,7 +617,7 @@ p {
     height: fit-content;
     box-sizing: border-box;
 
-    padding: 0 8% 8% 8%;
+    padding: 2% 8% 8% 8%;
 }
 #services_content_section > div{
     display: flex;
@@ -765,6 +769,44 @@ p {
     background-size: cover;
 }
 
+
+/* Contact page specific styling */
+.contact_content_section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100vw;
+    height: fit-content;
+    box-sizing: border-box;
+
+    padding: 2% 8% 0% 8%;
+}
+.contact_content_section > div {
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+}
+.contact_item {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: center;
+}
+.contact_item:not(:last-child) {
+    border-bottom: solid rgb(213, 213, 213) 1px;
+}
+.grid_column_1 {
+    grid-column: 1;
+    
+}
+.grid_column_3 {
+    grid-column: 3;
+    white-space: nowrap;
+    overflow: visible;
+    margin: 1rem;
+}
+
+
 /* Navigation page specific styling */
 .miniheader {
     font-size: 1.25rem;
@@ -790,7 +832,6 @@ p {
     width: fit-content;
 }
 .big_option a {
-    text-decoration: none;
     color: rgb(0, 0, 0);
 }
 #big_options:has(.big_option:hover) .big_option:not(:hover) a, #big_options:has(.big_option:active) .big_option:not(:active) a{
